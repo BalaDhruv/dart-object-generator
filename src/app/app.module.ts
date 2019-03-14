@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { ObjectDetailsComponent } from './modules/object-details/object-details.component';
+import { MethodsComponent } from './modules/methods/methods.component';
+import { ObjectComponent } from './modules/object/object.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HomeLayoutComponent,
-    NavbarComponent
+    NavbarComponent,
+    ObjectDetailsComponent,
+    MethodsComponent,
+    ObjectComponent
   ],
   imports: [
     BrowserModule,

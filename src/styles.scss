@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import './app/styles/components';
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -9,8 +9,18 @@
 body{
     margin:0;
     padding: 0;
+    color: $primary;
 
     p{
         margin: 0;
+    }
+
+    input{
+        @extend %border-button-style;
+        text-align: center;
+    }
+
+    input:focus{
+        outline: none;
     }
 }

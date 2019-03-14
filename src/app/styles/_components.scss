@@ -9,3 +9,11 @@
     padding: 10px 40px;
     font-size: 20px;
 }
+
+%border-button-style{
+    border: 1px solid $primary;
+    border-radius: 4px;
+    background-color: $secondry;
+    padding: 8px 0px;
+}
+

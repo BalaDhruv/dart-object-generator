@@ -2,8 +2,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    .nav{
+    .nav, .methods{
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
+    .methods{
+        margin: 1.5% 7%;
+    }
+
 }
