@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
-import { NavbarComponent } from './layout/navbar/navbar.component';
-import { ObjectDetailsComponent } from './modules/object-details/object-details.component';
-import { MethodsComponent } from './modules/methods/methods.component';
-import { ObjectComponent } from './modules/object/object.component';
+import { HomeLayoutComponent } from './ui/layout/home-layout/home-layout.component';
+import { NavbarComponent } from './ui/layout/navbar/navbar.component';
+import { ObjectDetailsComponent } from './ui/modules/object-details/object-details.component';
+import { MethodsComponent } from './ui/modules/methods/methods.component';
+import { ObjectComponent } from './ui/modules/object/object.component';
+import { MethodsState } from './store/methods/methods.state';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,12 @@ import { ObjectComponent } from './modules/object/object.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxsModule.forRoot([
+      MethodsState
+    ]),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
