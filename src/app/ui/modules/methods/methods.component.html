@@ -1,26 +1,26 @@
 <div class="methods">
-  <div class="primary-bordered-button copyWith">
-    <i class="material-icons"> check_box_outline_blank </i>
+  <div class="primary-bordered-button copyWith" (click)="changeCopyWith()">
+    <i class="material-icons">{{ (isCopyWith$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
     <p>copyWith( )</p>
   </div>
-  <div class="primary-bordered-button fromJson">
-    <i class="material-icons"> check_box_outline_blank </i>
+  <div class="primary-bordered-button fromJson" (click)="changeisFromJson()">
+    <i class="material-icons">{{ (isFromJson$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
     <p>fromJson( )</p>
   </div>
-  <div class="primary-bordered-button toJson">
-    <i class="material-icons"> check_box_outline_blank </i>
+  <div class="primary-bordered-button toJson" (click)="changeisToJson()">
+    <i class="material-icons">{{ (isToJson$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
     <p>toJson( )</p>
   </div>
-  <div class="primary-bordered-button setter">
-    <i class="material-icons"> check_box_outline_blank </i>
-    <p>setter( )</p>
+  <div class="primary-bordered-button setter" (click)="changeisHashCode()">
+    <i class="material-icons">{{ (isHashCode$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
+    <p>hashCode( )</p>
   </div>
-  <div class="primary-bordered-button equals">
-    <i class="material-icons"> check_box_outline_blank </i>
+  <div class="primary-bordered-button equals" (click)="changeisEquals()">
+    <i class="material-icons">{{ (isEquals$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
     <p>== ( )</p>
   </div>
-  <div class="primary-bordered-button toString">
-    <i class="material-icons"> check_box_outline_blank </i>
+  <div class="primary-bordered-button toString" (click)="changeisToString()">
+    <i class="material-icons"> {{ (isToString$ | async) ? 'check_box': 'check_box_outline_blank' }} </i>
     <p>toString( )</p>
   </div>
 </div>

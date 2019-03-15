@@ -1,0 +1,5 @@
+@import '../../styles/components';
+
+.object{
+    @extend %border-button-style;
+}
