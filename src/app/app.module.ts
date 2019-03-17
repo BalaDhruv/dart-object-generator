@@ -12,6 +12,7 @@ import { MethodsComponent } from './ui/modules/methods/methods.component';
 import { ObjectComponent } from './ui/modules/object/object.component';
 import { MethodsState } from './store/methods/methods.state';
 import { HomeLayoutComponent } from './ui/layout/home-layout/home-layout.component';
+import { VariableComponent } from './ui/modules/components/variable/variable.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeLayoutComponent } from './ui/layout/home-layout/home-layout.compone
     NavbarComponent,
     ObjectDetailsComponent,
     MethodsComponent,
-    ObjectComponent
+    ObjectComponent,
+    VariableComponent
   ],
   imports: [
     BrowserModule,
