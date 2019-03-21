@@ -2,4 +2,9 @@
 
 .object{
     @extend %border-button-style;
+    padding: 3%;
+
+    .className{
+        font-weight: bold;
+    }
 }

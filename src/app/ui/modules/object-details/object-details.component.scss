@@ -6,12 +6,17 @@
         justify-content: center;
         grid-gap: 20px;
         align-items: center;
+        margin-bottom: 20px;
 
         .is-mutable{
             display: grid;
             grid-template-columns: auto 1fr;
             justify-content: center;
             align-items: center;
+            
+            i, p{
+                cursor: pointer;
+            }
         }
     }
 }

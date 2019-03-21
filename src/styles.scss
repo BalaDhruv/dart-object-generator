@@ -18,9 +18,23 @@ body{
     input{
         @extend %border-button-style;
         text-align: center;
+        color: $primary;
+    }
+
+    input::placeholder{
+        color: $primary;
     }
 
     input:focus{
+        outline: none;
+    }
+
+    select{
+        @extend %border-button-style;
+        padding: 10px 0px;
+    }
+
+    select:focus{
         outline: none;
     }
 }

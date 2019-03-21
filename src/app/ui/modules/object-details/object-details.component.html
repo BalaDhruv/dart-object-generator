@@ -1,11 +1,12 @@
 <div class="obj-details">
   <div class="class">
     <div class="class-name">
-      <input type="text" placeholder="Class Name" #className>
+      <input type="text" placeholder="Class Name" (input)="setClassName(className.value)" #className>
     </div>
     <div class="is-mutable">
-      <i class="material-icons">check_box_outline_blank</i>
-      <p>isMutable</p>
+      <i class="material-icons"
+        (click)="changeMutable()">{{ (isMutable$ | async) ? 'check_box': 'check_box_outline_blank' }}</i>
+      <p (click)="changeMutable()">isMutable</p>
     </div>
   </div>
   <div class="variables">

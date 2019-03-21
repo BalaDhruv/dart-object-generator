@@ -13,6 +13,7 @@ import { ObjectComponent } from './ui/modules/object/object.component';
 import { MethodsState } from './store/methods/methods.state';
 import { HomeLayoutComponent } from './ui/layout/home-layout/home-layout.component';
 import { VariableComponent } from './ui/modules/components/variable/variable.component';
+import { ObjectState } from './store/object/object.state';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { VariableComponent } from './ui/modules/components/variable/variable.com
     BrowserModule,
     AppRoutingModule,
     NgxsModule.forRoot([
-      MethodsState
+      MethodsState,
+      ObjectState
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

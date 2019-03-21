@@ -1,0 +1,24 @@
+@import '../../../styles/components';
+
+.variable{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+
+    .type{
+        select{
+            color: $primary;
+            padding: 7px 20px;
+        }
+    }
+
+    .is-nullable{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 3px;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,7 +1,7 @@
-enum TYPES { INT, DOUBLE, STRING, BOOL, DATETIME, LIST, SET, MAPS, OBJECT }
+import { Types } from './types';
 
 export interface Variables {
     name: string;
-    type: TYPES;
+    type: Types;
     isNullable: boolean;
 }
