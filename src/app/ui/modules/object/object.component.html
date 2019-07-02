@@ -2,27 +2,65 @@
     <p>class <span class="className">{{ className$ | async }}</span> &#123;</p>
     <br>
 
-    <p class="variable tab" *ngFor="let variable of variables$ | async">
-        <span *ngIf="variable.name.length != 0">
-            <span *ngIf="!variable.isNullable">final&nbsp;</span>
-            {{ getType(variable.type) }}&nbsp;{{ variable.name }}&#59;
-        </span>
-    </p>
+    <div>
+        <p class="variable tab" *ngFor="let variable of variables$ | async">
+            <span *ngIf="variable.name.length != 0">
+                <span *ngIf="!variable.isNullable">final&nbsp;</span>
+                {{ getType(variable.type) }}&nbsp;{{ variable.name }}&#59;
+            </span>
+        </p>
+    </div><br>
+
+    <div>
+        <p class="tab">{{ className$ | async }}
+            &#40;
+            <span>
+                &#123;
+                <span *ngFor="let variable of variables$ | async">
+                    <span *ngIf="variable.name.length != 0">this.</span>
+                    {{ variable.name }}
+                    <span *ngIf="variable.name.length != 0">,</span>
+                </span>
+                &#125;
+            </span>
+            &#41;&#59;
+        </p>
+    </div>
     <br>
 
-    <p class="tab">{{ className$ | async }}
-        &#40;
-        <span>
-            &#123;
-            <span *ngFor="let variable of variables$ | async">
-                <span *ngIf="variable.name.length != 0">this.</span>
-                {{ variable.name }}
-                <span *ngIf="variable.name.length != 0">,</span>
+    <div class="copy-with">
+        <div class="tab">
+            <p>{{ className$ | async }} copyWith&#40;&#123; </p>
+            <div *ngFor="let variable of variables$ | async">
+                <p class="tab" *ngIf="variable.name.length != 0">{{ getType(variable.type) }}&nbsp;{{ variable.name }},
+                </p>
+            </div>
+        </div>
+        <p class="tab">
+            {{ className$ | async }} copyWith
+            &#40;
+            &#123;<br>
+            <span class="tab" *ngFor="let variable of variables$ | async">
+                <span *ngIf="variable.name.length != 0">{{ getType(variable.type) }}&nbsp;{{ variable.name }}</span>
+                <span *ngIf="variable.name.length != 0">,<br></span>
             </span>
             &#125;
-        </span>
-        &#41;&#59;
-    </p>
+            &#41;
+            &#61;&#62;{{ className$ | async }}
+            &#40;
+            &#123;<br>
+            <span class="tab" *ngFor="let variable of variables$ | async">
+                <span *ngIf="variable.name.length != 0"></span>
+                {{ variable.name }}
+                <span *ngIf="variable.name.length != 0">&#58;</span>
+                <span *ngIf="variable.name.length != 0">this.{{ variable.name }}</span>
+                <span *ngIf="variable.name.length != 0">,<br></span>
+            </span>
+            &#125;
+            &#41;
+            &#59;
+        </p>
+    </div>
 
 
     <p>&#125;</p>
