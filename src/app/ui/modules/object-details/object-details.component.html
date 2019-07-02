@@ -10,6 +10,6 @@
     </div>
   </div>
   <div class="variables">
-    <app-variable></app-variable>
+    <app-variable *ngFor="let curId of ids" [id]='curId' (addId)="addNewId($event)"></app-variable>
   </div>
 </div>

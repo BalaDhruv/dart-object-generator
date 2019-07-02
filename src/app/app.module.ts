@@ -14,6 +14,7 @@ import { MethodsState } from './store/methods/methods.state';
 import { HomeLayoutComponent } from './ui/layout/home-layout/home-layout.component';
 import { VariableComponent } from './ui/modules/components/variable/variable.component';
 import { ObjectState } from './store/object/object.state';
+import { VariableState } from './store/variable/variable.state';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ObjectState } from './store/object/object.state';
     AppRoutingModule,
     NgxsModule.forRoot([
       MethodsState,
-      ObjectState
+      ObjectState,
+      VariableState,
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

@@ -18,5 +18,6 @@
 
     div.primary-bordered-button{
         @extend %border-button-style;
+        cursor: pointer;
     }
 }

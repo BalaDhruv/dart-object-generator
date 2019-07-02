@@ -6,12 +6,21 @@
     justify-content: center;
     align-items: center;
     grid-gap: 20px;
+    margin-bottom: 20px;
 
     .type{
         select{
             color: $primary;
             padding: 7px 20px;
         }
+    }
+
+    .cb{
+        cursor: pointer;
+    }
+
+    input{
+        padding: 7px 10px;
     }
 
     .is-nullable{

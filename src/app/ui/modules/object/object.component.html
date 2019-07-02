@@ -1,4 +1,29 @@
 <div class="object">
-    <p>class <span class="className">{{ className$ | async }}</span> &#123;</p><br>
+    <p>class <span class="className">{{ className$ | async }}</span> &#123;</p>
+    <br>
+
+    <p class="variable tab" *ngFor="let variable of variables$ | async">
+        <span *ngIf="variable.name.length != 0">
+            <span *ngIf="!variable.isNullable">final&nbsp;</span>
+            {{ getType(variable.type) }}&nbsp;{{ variable.name }}&#59;
+        </span>
+    </p>
+    <br>
+
+    <p class="tab">{{ className$ | async }}
+        &#40;
+        <span>
+            &#123;
+            <span *ngFor="let variable of variables$ | async">
+                <span *ngIf="variable.name.length != 0">this.</span>
+                {{ variable.name }}
+                <span *ngIf="variable.name.length != 0">,</span>
+            </span>
+            &#125;
+        </span>
+        &#41;&#59;
+    </p>
+
+
     <p>&#125;</p>
 </div>

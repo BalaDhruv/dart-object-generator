@@ -1,20 +1,22 @@
 <div class="variable">
   <div class="name">
-    <input type="text" placeholder="Name" #className>
+    <input type="text" placeholder="Name" (input)="updateName(variableName.value)" #variableName>
   </div>
   <div class="type">
-    <select>
-      <option value="int">INT</option>
-      <option value="double">DOUBLE</option>
-      <option value="string">STRING</option>
-      <option value="bool">BOOL</option>
-      <option value="list">LIST</option>
-      <option value="sets">SETS</option>
-      <option value="maps">MAPS</option>
+    <select [value]='dataType' (change)="updateType($event)">
+      <option value="0">INT</option>
+      <option value="1">DOUBLE</option>
+      <option value="2">STRING</option>
+      <option value="3">BOOL</option>
+      <option value="4">DATETIME</option>
+      <option value="5">LIST</option>
+      <option value="6">SET</option>
+      <option value="7">MAPS</option>
+      <option value="8">OBJECT</option>
     </select>
   </div>
-  <div class="is-nullable">
-    <i class="material-icons">check_box_outline_blank</i>
-    <p>isMutable</p>
+  <div class="is-nullable" (click)="changeMutable()">
+    <i class="material-icons cb">{{ isMutable ? 'check_box': 'check_box_outline_blank' }}</i>
+    <p class="cb">isMutable</p>
   </div>
 </div>
